@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Length coveter</title>
+        <style>
+          html,
+          body{
+            margin: 0;
+            font-family: 'Popoins',sans-serif;
+            background-color: #f5e8ba;
+          }
+          #wrapper div,#wrapper h2{
+            display: flex;
+            justify-content: center;
+          }
+          #wrapper{
+            background-color: #1f2029;
+            height:500px;
+            width: 400px;
+            margin:200px auto;
+            padding: 30px;
+            border-radius: 10px;
+            
+          }
+          h2{
+            color: #ffeba7;
+            letter-spacing: 1px;
+            padding-top: 20px;
+            
+          }
+          input{
+            border-radius: 5px;
+            border: 2px solid black;
+            margin-top: 30px;
+            height: 3em;
+            width: 300px;
+            padding-left: 10px;
+            font-weight: 700;
+
+          }
+           input:active{
+            border: none;
+           }
+          button{
+            margin-top: 30px;
+            background-color: #ffeba7;
+            border-radius: 4px;
+            height: 44px;
+            font-weight: 600;
+            padding: 0 40px;
+            border: none;
+            color: #102770;
+          }
+          button:hover{
+            cursor: pointer;
+          }
+          #result{
+            color: white;
+            margin-top: 20px;
+            font-size: 32px;
+          }
+
+        </style>
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <h2>cm to inches</h2>
+            <div class="inputdiv">
+                <input type="text" id="input" placeholder="length in cm">
+            </div>
+            <div>
+                <button type="submit" onclick="convert()">convert to inches</button>
+            </div>
+            <div id="result">
+
+            </div>
+
+        </div>
+        <script>
+          function convert(){
+          const cmvalue =Number( document.getElementById("input").value)
+          const inchvalue = cmvalue/2.54
+          const result =document.getElementById("result")
+          result.innerHTML = inchvalue.toFixed(2)+"inches"
+
+          }
+
+    
+        </script>
+                  
+         
+
+        
+         
+   
+    </body>
+</html>
